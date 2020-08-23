@@ -161,8 +161,25 @@
 							<article id="Details">
 								<h2 class="major">Project Details</h2>
 										<h3>Aims</h3>
-										<p>IT Support co-ordinator. IT support coordinators are responsible for developing, organising and implementing a company’s IT goals. They can provide the organisation general support duties such as monitoring computer performances, providing and installing updates on the work systems, installing software for the technology and could also work on fixing hardware issues.
-										</p>
+										<p>The aim of this project is to make a medieval fantasy style 2D platformer. “Shards of Limbo” will have to fulfil the following goals in order to necessarily fulfil the aim:</p>
+										<ol>
+  										<li>Horizontal movement: A 2D platformer is played along the “x” and “y” axis, which necessitates that a system is put in place that allows for the characters in the game to move along these axes. The system needs to be able to check if a character is moving and respond accordingly.</li>
+											<br>
+											<li>Jumping: 2D platformers have a variety of mechanics to enhance the gameplay. A jumping mechanic allows for enhanced level design. A system will have to be implemented which allows for characters to reach higher elevations after a jump command is given.</li>
+											<br>
+											<li>Platform traversal: A signature feature of 2D platformers is the inclusion of geological surfaces to which a character must tread. A system for static objects will be implemented. These will be used in the game as platforms which all characters will move on.</li>
+											<br>
+											<li>Obstacles: 2D platformers are known to include objects which force the player to move in certain directions in order to traverse it. The game will have to incorporate some form of terrain or other inanimate style object, to pose an additional problem for the player.</li>
+											<br>
+											<li>Minimum of a single Chaos Orb enemy type: 2D platformers have an array of enemies which act as adversaries that a player must deal with in order to progress through the level. There are plans for at least one type of enemy in the game. This enemy will have to receive corresponding systems which allow it to interact with the game as intended.</li>
+											<br>
+											<li>A Rift spawner: 2D platformers typically have a method of generating enemies to populate a level. A method we are using in order to spawn enemies is via the use of a spawn point, which we can otherwise call a “Rift spawner”.</li>
+											<br>
+											<li>One completed level: A level in a 2D platformer is comprised of a multitude of platforms and geological objects which allow for the formation of a beginning segment, and an ending segment.</li>
+											<br>
+											<li>Interactions and consequences: All of the objects and characters in a 2D platformer must somehow interact with each other. The type of interaction depends on the object or character involved. Different actions performed by a character will influence something else in the video game world. A system which yields results for each action must be implemented.</li>
+										</ol>
+										<p>Extended features include Health and Magic Potions, additional attacks, environmental hazards (such as false platforms) and additional levels. These would be implemented to increase the variety of the game, but it is unknown as to whether or not these can be implemented within the allotted time, so they will be left in limbo unless stated otherwise.</p>
 										<div class="container">
 										<form>
 											<input type="button" value="Back" onclick="history.back(header)">
@@ -174,17 +191,68 @@
 							<article id="Map">
 								<h2 class="major">Road-Map</h2>
 										<h3>Plans and Progress</h3>
-										<p>Ideally, I want to programme my own mobile application and run a company. To be the founder of a tech start-up would be the pinnacle of my career. This job would entail proficiency regarding programming and other technical skills (Wireframing, prototyping, testing and development), a strong business mindset (to the likes of marketing and viability), flawless interpersonal skills (for conflict resolution and negotiations), leadership qualities and to be a visionary (Early Growth, 2019). This would ultimately make my ideal job similar to that of a client-side Software Engineer (Uchiha, 2012).
-										</p>
+										<p>Our project is a video game, which is designed in the fashion of a 2D platformer. The player will play as a player controlled character, who has to complete certain tasks on a level before being able to progress to the next level.</p>
+										<p>The game will be able to fulfil this aim via the implementation of various features. These features are; the player character, the enemy character, level design, attacks and health/damage system.</p>
+										<p>Beginning with the player character, a component validation test has been implemented. This allows for the confirmation that the individual frames of the player object are in correct order and numbered such that the character moves appropriately when “animated”.</p>
+										<p>An amount of integration validation tests have also been implemented. These tests are conducted on individual components once said component is loaded into the game or scene. These tests will be conducted during the integration stage of development. These tests are designed to cater towards the following:</p>
+										<ol>
+  										<li>Whether the player sprite can be seen in the game environment.</li>
+											<br>
+											<li>Whether the player character is ordered or “layered” correctly alternatively, whether or not the player character resides in the right space along the theoretical z axis and is not covered by background or foreground scenery.</li>
+											<br>
+											<li>Whether or not the player character moves left or right when the corresponding key is pressed.</li>
+											<br>
+											<li>Whether or not the player character jumps when the jump button is pressed.</li>
+											<br>
+											<li>Whether the player character animates the correspondingly correct animation when moving left or right on the x axis.</li>
+											<br>
+											<li>A Rift spawner: 2D platformers typically h6	Whether or not the player jumping animation plays when the space bar is pressed</li>
+											<br>
+											<li>The interactions that take place when the player character interacts with the foreground, enemy or hazardous objects.</li>
+											<br>
+											<li>Inputs aside from the defined controls are designed to have no effect on the player character.</li>
+											<br>
+											<li>9	The player character is designed so as to not collide with the background or decorative elements.</li>
+											<br>
+											<li>10	The game confirms whether or not the player character continues to move along the x axis whilst in the air while jumping.</li>
+										</ol>
+										<br>
+										<p>A few acceptance validation tests will be conducted on the individual component once it resides in the working prototype/game:</p>
+										<ol>
+											<li>Run the prototype/game using the three most popular screen resolutions of 1366x768, 1920x1080 and 1536x864. Ensure there is no obvious malfunctions regarding screen resolution and that the character appears, moves and behaves as expected on all 3 screen resolutions.</li>
+											<br>
+											<li>Confirm that the player moves about the game at an appropriate speed and that controlling the character’s movement is at an appropriate difficulty level.</li>
+										</ol>
+										<br>
+										<p>The second feature is the enemy character. A component validation test has been implemented. This test confirmed that the individual frames of the enemy character are in the correct order and are numbered such that they appear appropriately “animated”.</p>
+										<p>An amount of integration validation tests have also been implemented. These tests will be conducted on the individual components once they have been loaded into the game or scene. These tests will be conducted during the integration stage of development. These tests are designed to cater to the following:</p>
+										<br>
+										<ol>
+											<li>Visual confirmation that the enemy character can be seen in the game environment</li>
+											<br>
+											<li>Visual confirmation that the enemy character is ordered or “layered” correctly. That is, confirming that the character resides in the correct space along the theoretical z axis and is not covered by background or foreground scenery.</li>
+											<br>
+											<li>Confirming that the enemy character can collide with the player character, triggering damage to the player character</li>
+										</ol>
+										<p>The third core feature is the level design, Shards of Limbo 2D game takes place in a fantasy world where rifts have opened spawning enemy orbs. The hero battles their way through the level to find the exit after sealing all rifts. The first level will be an introduction to the game and typical obstacles the player may encounter, such as enemies, moving platforms, crumbling platforms, and death falls.</p>
+										<p>The following validation tests will be conducted on the individual component once it has been loaded into the game or scene. These tests will be conducted during the integration stage of development:</p>
+										<ol>
+											<li>Confirm scene mock-up contains pathways to exit with obstacles and platforms present.</li>
+											<li>Confirms that tile set artifacts are complete and are able to be imported and used by Unity. </li>
+											<li>Confirms the level loads successfully on game start by starting the game.</li>
+											<li>Confirms player character interacts correctly with the components of the level including platforms, ground and other obstacles by moving the player character on-top of, underneath and on corners of level platforms.</li>
+											<li>Confirms player character can finish the level when the player object collides with the level exit object.</li>
+											<li>Confirms player character cannot finish the level before the player has closed all rifts within the present level.</li>
+										</ol>
+										<br>
+										<p>The game also planned for the inclusion of extended features. These are; health potions, magic potions, additional attacks and environmental hazards. These features could not be implemented, though some progress was made on some of them.</p>
 										<h3>Team Roles</h3>
-										<p>There are similar aspects about Michaels and myselfs ideal jobs. I believe we would share many soft-skills and both have an analytical approach to tasks however, as Michael wishes to enter a different industry, this is where our similarities diverge and our hard-skills would be completely different.
-										</p>
+										<p>As Mike has a keen interest in game development, he was in charge of level and character design. This was beneficial to the team as no conflicting ideas were present throughout the duration of the design stage. Martin would shadow Mike awaiting updates to put into words what had been achieved at the end of that point. Trent was in charge of documenting and presenting the ideas through formatting documents, as well as setting up and coding the website utilised within this project. Tim was available to help wherever possible.</p>
 										<h3>Time frame</h3>
 										<p>My ideal job is very different in comparison with Tims’ ideal job. Tims’ ideal job has him engaging with health of systems and platforms while I intend to write the software. If the professional Tim and myself worked together I would be supplying the software and he would monitor and manage the software on his workplaces systems/servers. He would be instrumental in assessing how my software intergrates with differing systems/servers.
 										</p>
 										<h3>Team Processes and communication</h3>
-										<p>My ideal job in contrast to Martins is not so different pending the specialisation he ends up desiring. Similalrly, we both wish to create and maintain software, however I wish to take my work commercial and ultimately start a company. It is imperative Martin and myself remain leaders of PlanIT’s Github repositories as this platform is used consistently amongst professional Software Engineers (Kosner, 2012).
-										</p>
+										<p>The group communicated with each other using Discord which is a very useful program/application as it allows us to talk whenever we need to ask each other a question or show each other something. Discord also allows us to send documents and images to each other which proves very useful when completing the project online. The group process would include compiling information through research or design implementation, which was mostly compiled by Martin, which would be passed onto Trent for formatting and proof-reading. Once this process was complete the information would then be uploaded to the website and pushed through to the master branch of our GitHub repository. The level design and graphics were discussed between Tim and Mike to ensure minimal conflict arose. The design was implemented by Mike who would then go and develop the code required for our project. Consistent communication was evident throughout the assessment right up until the due date time.</p>
 										<div class="container">
 										<form>
 											<input type="button" value="Back" onclick="history.back(header)">
@@ -199,8 +267,7 @@
 										<p>My ideal job is a software engineer. As of writing this, I am not sure what type of specialization I would select but if I had to guess than I would at prefer a specialization that focuses on creating and maintaining software, as this aligns more with my interests.
 										</p>
 										<h3>Testing</h3>
-										<p>I believe I would be working in conjunction with someone of Michaels degree to a rather large extent. The degree of interaction would probably depend on the project itself, but I can see it would be necessary for the software- and electronic engineering sides of IT to cooperate in order to complete objectives.
-										</p>
+										<p>We will test the project by running the game and playing through it to find any errors or bugs which will require playing through every possible outcome and ensuring they all work. The project will be completed when we are able to play through the game with every aspect of the game functioning as it should. After we are happy with our own run through we will take our work to the user to gain fundemental feedback on level design and even things us as the developing team have not thought about yet. User testing is the most effective way at producing quality work and we intend to utilise this method of testing upon our completion of work.</p>
 										<div class="container">
 										<form>
 											<input type="button" value="Back" onclick="history.back(header)">
